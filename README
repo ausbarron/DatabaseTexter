@@ -1,5 +1,18 @@
 Test files for various projects and assorted things.
 
+for apache2 Server creation on Linux(Ubuntu):
+1. sudo apt-get install apache2
+2. sudo service apache2 start
+
+Install PHP:
+1. sudo apt-get install php
+2. sudo apt-get install php-mysql
+3. sudo /etc/init.d/apache2 restart
+
+Hosting HTML/PHP on Apache2:
+1. sudo touch /var/www/html/formname.html (must use sudo to alter form code)
+2. sudo touch /var/www/html/formsubmission.php (must use sudo to alter code)
+
 CREATE DATABASE persons;
 
 CREATE TABLE testcase
