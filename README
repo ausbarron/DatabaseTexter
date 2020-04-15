@@ -1,1 +1,12 @@
 Test files for various projects and assorted things.
+
+CREATE DATABASE persons;
+
+CREATE TABLE testcase
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT, 
+  name            VARCHAR(150) NOT NULL,                
+  phoneNumber	VARCHAR(12) NOT NULL,
+  ZIP_CODE 	VARCHAR(5) NOT NULL,                        
+  PRIMARY KEY     (id)                                  
+);
