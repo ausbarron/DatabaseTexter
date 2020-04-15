@@ -4,7 +4,7 @@ $name=$_POST['Name'];
 $phoneNumber=$_POST['phoneNumber'];
 $zipCode=$_POST['zipCode'];
 
-if(!empty($name) || !empty($phoneNumber) || !empty($zipCode){
+if(!empty($name) || !empty($phoneNumber) || !empty($zipCode)) {
 	$hostname="localhost";
 	$username="testuser";
 	$password="test123";
