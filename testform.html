@@ -8,15 +8,15 @@
   <table>
    <tr>
     <td>Name: </td>
-    <td><input name="Name" type = "text"></td>
+    <td><input name="Name" type = "text" required></td>
    </tr>
    <tr>
     <td>PhoneNumber: </td>
-    <td><input name="phoneNumber" type = "text"></td>
+    <td><input name="phoneNumber" type = "tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
    </tr>
    <tr>
     <td>Zip Code: </td>
-    <td><input name="zipCode" type = "text"></td>
+    <td><input name="zipCode" type = "text" pattern="[0-9]{5}" title="Five digit zip code" required></td>
    </tr>
    <tr>
     <td><input type="Submit" name="submit" value="Submit"></td> 
