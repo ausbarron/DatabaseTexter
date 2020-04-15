@@ -1,15 +1,15 @@
 <?php
 
-$name=$_POST['Name'];
+$name=$_POST['Name']; 
 $phoneNumber=$_POST['phoneNumber'];
 $zipCode=$_POST['zipCode'];
 
 if(!empty($name) || !empty($phoneNumber) || !empty($zipCode)) {
 	$hostname="localhost";
-	$username="testuser";
-	$password="test123";
-	$db_name="persons";
-	$tbl_name="testcase";
+	$username="testuser"; //user login for sqldatabase
+	$password="test123"; //password for user login for sqldatabase
+	$db_name="persons"; //database accessed
+	$tbl_name="testcase";//table used
 
 	$connection = new mysqli($hostname, $username, $password, $db_name);
 
