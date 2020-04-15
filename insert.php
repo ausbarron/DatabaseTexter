@@ -26,14 +26,14 @@ if(!empty($name) || !empty($phoneNumber) || !empty($zipCode){
 		$stmt->store_result();
 		$rnum = $stmt->num_rows;
 		
-		if($rnum == 0){
+		if($rnum == 0) {
 			$stmt->close();
 
 			$stmt= $connection->prepare($INSERT);
 			$stmt->bind_param("sss", $Name, $phoneNumber, $zipCode);
 			$stmt->execute();
 			echo "New record inserted successfully";
-		} else{
+		} else {
 			echo "Number already exists.";
 		}
 	}
