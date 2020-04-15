@@ -6,7 +6,7 @@ from twilio.rest import Client
 import pymysql
 
 account_sid = 'AC9a765b751eb35584336004c8fc5382b8'
-auth_token = 'f700b386f779cbe2a39b505987939226'
+auth_token = 'db06dd600d5bdac989bb9f16f8e02172'
 client = Client(account_sid, auth_token)
 
 db = pymysql.connect("localhost", "testuser", "test123", "persons")
