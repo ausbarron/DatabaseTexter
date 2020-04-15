@@ -17,7 +17,7 @@ if(!empty($name) || !empty($phoneNumber) || !empty($zipCode)) {
 		die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 	} else {
 		$SELECT = "SELECT phoneNumber From testcase Where phoneNumber = ? Limit 1";
-		$INSERT = "INSERT Into testcase (Name, phoneNumber, zipcode) values(?, ?, ?)";
+		$INSERT = "INSERT Into testcase (name, phonenumber, ZIP_CODE) values(?, ?, ?)";
 
 		$stmt = $connection->prepare($SELECT);
 		$stmt->bind_param("s", $phoneNumber);
