@@ -1,8 +1,9 @@
 <?php
 
-$name=$_POST['Name']; //posted name from form
-$phoneNumber=$_POST['phoneNumber']; //posted number from form
-$zipCode=$_POST['zipCode']; //posted zip code from form
+$name=filter_var($_POST['Name'], FILTER_SANITIZE_STRING); //posted name from form
+$phoneNumber=filter_var($_POST['phoneNumber'], FILTER_SANITIZE_INT); //posted number from form
+$zipCode=filter_var($_POST['zipCode'], FILTER_SANITIZE_INT); //posted zip code from form
+//entries are sanitized of unneeded characters for their data entry.
 
 // if name, phoneNumber, and zipCode are not empty a SQL server will be connected to, else the system echo prints and site dies.
 if(!empty($name) || !empty($phoneNumber) || !empty($zipCode)) {
