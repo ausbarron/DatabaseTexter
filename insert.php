@@ -21,7 +21,7 @@ if(!empty($name) || !empty($phoneNumber) || !empty($zipCode)) {
 		$INSERT = "INSERT Into testcase (name, phonenumber, ZIP_CODE) values(?, ?, ?)"; //insert query statement into database.
 
 		$stmt = $connection->prepare($SELECT); //prepares $SELECT for execution
-		$stmt->bind_param("s", $phoneNumber); //assigns the phonenumber from the form and replaces the ? in $SELECT
+		$stmt->bind_param("s", $phoneNumber); //assigns the phonenumber from the form, binds it as a string to prevent injection and replaces the ? in $SELECT
 		$stmt->execute(); //executes the query
 		$stmt->bind_result($phoneNumber); //binds the phonenumber to prepared statement
 		$stmt->store_result(); //stores result
