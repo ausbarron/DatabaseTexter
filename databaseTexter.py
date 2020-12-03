@@ -3,10 +3,11 @@
 # Note: For the from variable. This number may change but will be hard coded for demonstration.
 
 from twilio.rest import Client ##imports API for twilio
+from myconfig import *
 import pymysql ##imports module for mysql database manipulation
 
-account_sid = 'AC9a765b751eb35584336004c8fc5382b8' ##account id for twilio
-auth_token = 'db06dd600d5bdac989bb9f16f8e02172' ##account token for twilio
+account_sid = account_id ##account id for twilio
+auth_token = token_id ##account token for twilio
 client = Client(account_sid, auth_token) ##client object declaration
 
 db = pymysql.connect("localhost", "testuser", "test123", "persons") ##database connection established with sample user
